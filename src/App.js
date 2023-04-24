@@ -3,6 +3,7 @@ import Home from './Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
 import Create from './Create';
 import BlogDetails from './BlogDetail';
+import NotFound from './NotFound';
 
 function App() {
   //burada verilenler teyin etib ashagida {} ichinde chagirmaq olur
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route exact path="/blogs/:id">
           <BlogDetails/>
+        </Route>
+        <Route path="*">
+          <NotFound />
         </Route>
       </Switch>
      </div>
